@@ -83,6 +83,78 @@ Healthcare Data
 
 ### 40+ Numerical Features Created
 
+#### 1. Demographic Features (5)
+age # Patient age
+
+age_group # Categorized (1-4) by decades
+
+is_elderly # Binary flag for age ≥ 65
+
+is_young # Binary flag for age ≤ 30
+
+hot_spotter_flags # Readmission & chronic flags
+
+text
+
+#### 2. Diagnosis-Based Features (8)
+total_conditions # Count of all diagnoses
+
+chronic_conditions # Count of chronic conditions
+
+unique_conditions # Distinct condition types
+
+has_cancer/diabetes/hypertension # Binary disease flags
+
+comorbidity_score # chronic_conditions × unique_conditions
+
+chronic_burden # chronic/total conditions ratio
+
+text
+
+#### 3. Visit Pattern Features (9)
+total_visits # All healthcare encounters
+
+er_visits, urgent_care_visits, inpatient_visits # By type
+
+emergency_visits # ER + Urgent Care combined
+
+emergency_ratio # Emergency visits/total visits
+
+readmissions # Count of readmissions
+
+readmission_rate # Readmissions/total visits
+
+is_frequent_visitor # Binary for ≥5 visits
+
+text
+
+#### 4. Care Quality Features (6)
+total_care_events # Count of care activities
+
+care_gaps # Missed/delayed procedures
+
+care_gap_ratio # care_gaps/total_care_events
+
+care_adherence # 1 - care_gap_ratio
+
+avg_measurement # Mean lab/vital values
+
+abnormal_lab_risk # Risk score for abnormal values
+
+text
+
+#### 5. Advanced Interaction Features (6)
+age_chronic_score # age × chronic_conditions
+
+visit_care_ratio # total_visits/(total_care_events + 1)
+
+risk_multiplier # age_group × (chronic + 1) × (emergency_ratio + 0.1)
+
+care_utilization_score # (visits + care_events)/age
+
+health_complexity # comorbidity × emergency_ratio × care_gap_ratio
+
+days_since_hot_spot # Temporal hot spotter tracking
 ---
 
 ## Text Processing & NLP
