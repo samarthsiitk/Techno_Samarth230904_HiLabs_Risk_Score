@@ -216,12 +216,4 @@ PATIENT RISK DISTRIBUTION (2,001 patients):
 ├── High Risk (3-10):      167 patients (8.3%)
 └── Very High Risk (>10):   11 patients (0.5%)
 
----
 
-<div align="center">
-
-**Making Healthcare Predictable, One Patient at a Time**
-
-*This model represents state-of-the-art healthcare risk prediction, combining advanced machine learning, comprehensive feature engineering, and rigorous validation to deliver clinically actionable insights for Value-Based Care programs.*
-
-</div>
